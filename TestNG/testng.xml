@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="BankingSuite">
+    <test name="NegativeTestsOnly">
+        <groups>
+            <run>
+                <include name="negative-tests"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.example.banking.BankAccountGroupTest"/>
+        </classes>
+    </test>
+
+    <test name="FullSuite">
+        <classes>
+            <class name="com.example.banking.BankAccountTest"/>
+            <class name="com.example.banking.BankAccountLifecycleTest"/>
+            <class name="com.example.banking.BankAccountExceptionTest"/>
+            <class name="com.example.banking.BankAccountDataProviderTest"/>
+            <class name="com.example.banking.BankAccountDependencyTest"/>
+        </classes>
+    </test>
+</suite>
